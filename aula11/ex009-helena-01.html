@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Nacionalidade da pessoa</h1>
+    País de origem: <input type="text" name ="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var txt = window.document.querySelector('input#txtnac') 
+            var res = window.document.querySelector('div#res')
+            var pais = (txtnac.value)
+            res.innerHTML = `Vocé é do país: <strong>${pais}</strong><br/>`
+            if(pais == 'Brasil') {
+                res.innerHTML += 'Você é <strong>BRASILEIRO</strong>!<br/>'
+                res.innerHTML += "Seja bem vindo!"
+                
+            } else {
+                res.innerHTML += 'Você é <strong>ESTRANGEIRO</strong>!<br/>'
+                res.innerHTML += 'Precisamos verificar o seu visto e autorização para permanecer no país.'
+            }
+        }
+    </script>
+</body>
+</html>
